@@ -20,6 +20,8 @@ jobs:
     - name: npm install, build, and test
       working-directory: Application
       run: |
+        sudo apt-get update
+        sudo apt-get install zip 
         zip -qq -r . 
         npm install
         npm run build --if-present
